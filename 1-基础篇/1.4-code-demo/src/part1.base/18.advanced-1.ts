@@ -1,59 +1,64 @@
 interface DogInterface {
-    run(): void
+	run(): void;
 }
 interface CatInterface {
-    jump(): void
+	jump(): void;
 }
 let pet: DogInterface & CatInterface = {
-    run() {},
-    jump() {}
-}
+	run() {},
+	jump() {},
+};
 
-let a: number | string = 1
-let b: 'a' | 'b' | 'c'
-let c: 1 | 2 | 3
+let a: number | string = 1;
+let b: 'a' | 'b' | 'c';
+let c: 1 | 2 | 3;
 
 class Dog implements DogInterface {
-    run() {}
-    eat() {}
+	run() {}
+	eat() {}
 }
-class Cat  implements CatInterface {
-    jump() {}
-    eat() {}
+class Cat implements CatInterface {
+	jump() {}
+	eat() {}
 }
-enum Master { Boy, Girl }
+enum Master {
+	Boy,
+	Girl,
+}
 function getPet(master: Master) {
-    let pet = master === Master.Boy ? new Dog() : new Cat();
-    // pet.run()
-    // pet.jump()
-    pet.eat()
-    return pet
+	let pet = master === Master.Boy ? new Dog() : new Cat();
+	// pet.run()
+	// pet.jump()
+	pet.eat();
+	return pet;
 }
 
 interface Square {
-    kind: "square";
-    size: number;
+	kind: 'square';
+	size: number;
 }
 interface Rectangle {
-    kind: "rectangle";
-    width: number;
-    height: number;
+	kind: 'rectangle';
+	width: number;
+	height: number;
 }
 interface Circle {
-    kind: "circle";
-    radius: number;
+	kind: 'circle';
+	radius: number;
 }
-type Shape = Square | Rectangle | Circle
+type Shape = Square | Rectangle | Circle;
 function area(s: Shape) {
-    switch (s.kind) {
-        case "square":
-            return s.size * s.size;
-        case "rectangle":
-            return s.height * s.width;
-        case 'circle':
-            return Math.PI * s.radius ** 2
-        default:
-            return ((e: never) => {throw new Error(e)})(s)
-    }
+	switch (s.kind) {
+		case 'square':
+			return s.size * s.size;
+		case 'rectangle':
+			return s.height * s.width;
+		case 'circle':
+			return Math.PI * s.radius ** 2;
+		default:
+			return ((e: never) => {
+				throw new Error(e);
+			})(s);
+	}
 }
-console.log(area({kind: 'circle', radius: 1}))
+console.log(area({ kind: 'circle', radius: 1 }));

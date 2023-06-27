@@ -1,5 +1,5 @@
-import Server = require('../src/server')
+import Server = require('../src/server');
 
-let c = new Server()
+let c = new Server();
 
 // do test

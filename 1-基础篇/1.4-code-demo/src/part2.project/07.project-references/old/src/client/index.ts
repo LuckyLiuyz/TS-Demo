@@ -1,7 +1,7 @@
-import { getTime } from '../common'
+import { getTime } from '../common';
 
-console.log(`Client Time: ${getTime()}`)
+console.log(`Client Time: ${getTime()}`);
 
 class Client {}
 
-export = Client
+export = Client;

@@ -1,5 +1,5 @@
-import Client = require('../src/client')
+import Client = require('../src/client');
 
-let c = new Client()
+let c = new Client();
 
 // do test

@@ -1,45 +1,41 @@
 interface Human {
-    name: string;
-    eat(): void;
+	name: string;
+	eat(): void;
 }
 
 class Asian implements Human {
-    constructor(name: string) {
-        this.name = name;
-    }
-    name: string
-    eat() {}
-    age: number = 0
-    sleep() {}
+	constructor(name: string) {
+		this.name = name;
+	}
+	name: string;
+	eat() {}
+	age: number = 0;
+	sleep() {}
 }
 
 interface Man extends Human {
-    run(): void
+	run(): void;
 }
 
 interface Child {
-    cry(): void
+	cry(): void;
 }
 
 interface Boy extends Man, Child {}
 
 let boy: Boy = {
-    name: '',
-    run() {},
-    eat() {},
-    cry() {}
-}
+	name: '',
+	run() {},
+	eat() {},
+	cry() {},
+};
 
 class Auto {
-    state = 1
-    // private state2 = 1
+	state = 1;
+	// private state2 = 1
 }
-interface AutoInterface extends Auto {
-
-}
+interface AutoInterface extends Auto {}
 class C implements AutoInterface {
-    state1 = 1
+	state1 = 1;
 }
-class Bus extends Auto implements AutoInterface {
-
-}
+class Bus extends Auto implements AutoInterface {}

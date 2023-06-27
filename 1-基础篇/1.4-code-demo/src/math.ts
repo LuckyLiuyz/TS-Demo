@@ -1,12 +1,12 @@
 function add(a: number, b: number) {
-    return a + b;
+	return a + b;
 }
 
 function sub(a: number, b: number) {
-    return a - b;
+	return a - b;
 }
 
 module.exports = {
-    add,
-    sub
-}
+	add,
+	sub,
+};

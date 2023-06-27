@@ -1,11 +1,11 @@
 interface Obj {
-    a: string;
-    b: number;
+	a: string;
+	b: number;
 }
-type ReadonlyObj = Readonly<Obj>
+type ReadonlyObj = Readonly<Obj>;
 
-type PartialObj = Partial<Obj>
+type PartialObj = Partial<Obj>;
 
-type PickObj = Pick<Obj, 'a' | 'b'>
+type PickObj = Pick<Obj, 'a' | 'b'>;
 
-type RecordObj = Record<'x' | 'y', Obj>
+type RecordObj = Record<'x' | 'y', Obj>;
