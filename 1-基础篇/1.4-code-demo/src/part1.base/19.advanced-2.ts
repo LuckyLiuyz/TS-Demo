@@ -11,7 +11,7 @@ function getValues<T, K extends keyof T>(obj: T, keys: K[]): T[K][] {
 	return keys.map((key) => obj[key]);
 }
 console.log(getValues(obj, ['a', 'b']));
-// console.log(getValues(obj, ['d', 'e']))
+// console.log(getValues(obj, ['d', 'e'])); // 报错： Type '"d"' is not assignable to type '"a" | "b" | "c"'.
 
 // keyof T
 interface Obj {

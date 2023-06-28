@@ -21,14 +21,8 @@ function isJava(lang: Java | JavaScript): lang is Java {
 	return (lang as Java).helloJava !== undefined;
 }
 
-function getLanguage(type: Type, x: string | number) {
+function getLanguage(type: Type, arg2: string | number) {
 	let lang = type === Type.Strong ? new Java() : new JavaScript();
-
-	if (isJava(lang)) {
-		lang.helloJava();
-	} else {
-		lang.helloJavaScript();
-	}
 
 	// if ((lang as Java).helloJava) {
 	//     (lang as Java).helloJava();
@@ -36,7 +30,7 @@ function getLanguage(type: Type, x: string | number) {
 	//     (lang as JavaScript).helloJavaScript();
 	// }
 
-	// instanceof
+	// 方法1：instanceof
 	// if (lang instanceof Java) {
 	//     lang.helloJava()
 	//     // lang.helloJavaScript()
@@ -44,20 +38,26 @@ function getLanguage(type: Type, x: string | number) {
 	//     lang.helloJavaScript()
 	// }
 
-	// in
+	// 方法2：in
 	// if ('java' in lang) {
 	//     lang.helloJava()
 	// } else {
 	//     lang.helloJavaScript()
 	// }
 
-	// typeof
-	// if (typeof x === 'string') {
-	//     console.log(x.length)
-	// } else {
-	//     console.log(x.toFixed(2))
-	// }
+	// 方法3：typeof
+	if (typeof arg2 === 'string') {
+	    console.log(arg2.length)
+	} else {
+	    console.log(arg2.toFixed(2))
+	}
 
+	// 方法4： 类型保护函数
+	if (isJava(lang)) {
+		lang.helloJava();
+	} else {
+		lang.helloJavaScript();
+	}
 	return lang;
 }
 

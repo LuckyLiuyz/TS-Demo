@@ -1,3 +1,11 @@
+/**
+ *
+ * 类型注解语法: 相当于强类型语言中的类型声明
+ * 例如：let bool: boolean = true; ==> :boolean 就是类型注解
+ *
+ *  */
+
+
 {
 	// 原始类型
 	let bool: boolean = true;

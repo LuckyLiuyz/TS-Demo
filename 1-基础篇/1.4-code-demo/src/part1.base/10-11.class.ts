@@ -19,11 +19,11 @@
 			this.pri();
 		}
 
-		// 实例的属性必须有初始值，或者在构造函数中被初始化, 或者通过 ？声明为可选属性
+		// 实例的属性必须有初始值，或者在构造函数中被初始化, 或者通过?声明为可选属性
 		public name?: string = 'dog';
 		run() {}
 		private pri() {} //私有成员，只能由自己的实例调用
-		protected pro() {} //受保护的成员，只能在当前类或类的子类中访问，而不能用实例访问
+		protected pro() {} //受保护的成员，只能在当前类或其子类中访问，而不能用实例访问
 		readonly legs: number = 4; // 只读属性，不可以被更改，一定要被初始化
 		static food: string = 'bones'; // 类的静态成员，只能通过类名来调用，而不能通过实例调用；可以被子类继承
 		sleep() {
@@ -37,7 +37,7 @@
 	// dog.pri();// 报错：Property 'pri' is private and only accessible within class 'Dog'.
 	// dog.pro(); //报错： Property 'pro' is protected and only accessible within class 'Dog' and its subclasses.
 	console.log('Dog.food', Dog.food);
-	console.log('dog.eat', dog.eat());
+	console.log('dog.eat', dog.eat()); // 直接调用抽象类中的方法
 
 	class Husky extends Dog {
 		// 构造函数的参数也可以追加修饰符，表示将此参数自动变为当前类的属性
@@ -77,9 +77,12 @@
 	new Workflow().step1().step2();
 
 	class MyFlow extends Workflow {
-		next() {
+		next1() {
+			return this;
+		}
+		next2() {
 			return this;
 		}
 	}
-	new MyFlow().next().step1().next().step2();
+	new MyFlow().next1().step1().next2().step2();
 }

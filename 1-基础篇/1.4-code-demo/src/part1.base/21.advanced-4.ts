@@ -1,18 +1,16 @@
 // T extends U ? X : Y
 
-type TypeName<T> = T extends string
-	? 'string'
-	: T extends number
-	? 'number'
-	: T extends boolean
-	? 'boolean'
-	: T extends undefined
-	? 'undefined'
-	: T extends Function
-	? 'function'
-	: 'object';
-type T1 = TypeName<string>;
-type T2 = TypeName<string[]>;
+type TypeName<T> =
+	T extends string	? 'string'	:
+	T extends number	? 'number'	:
+	T extends boolean	? 'boolean'	:
+	T extends undefined	? 'undefined'	:
+	T extends Function	? 'function'	:
+	'object';
+
+type t1 = TypeName<'string'>; // 'string'
+type t2 = TypeName<1>; // 'number'
+type t3 = TypeName<[1,2,3]>; // 'object'
 
 // (A | B) extends U ? X : Y
 // (A extends U ? X : Y) | (B extends U ? X : Y)
