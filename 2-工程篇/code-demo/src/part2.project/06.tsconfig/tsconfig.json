@@ -1,3 +1,4 @@
+// TS 编译相关的重要配置说明
 {
   "compilerOptions": {
       // "incremental": true,                // 增量编译

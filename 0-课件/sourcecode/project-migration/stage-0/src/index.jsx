@@ -5,11 +5,11 @@ import Hello from './components/Hello';
 
 import { add } from './utils/a';
 
-add(1, 1)
+add(1, 1);
 
 ReactDOM.render(
-    <div>
-        <Hello name="World" />
-    </div>,
-    document.querySelectorAll('.app')[0]
+	<div>
+		<Hello name='World' />
+	</div>,
+	document.querySelectorAll('.app')[0]
 );

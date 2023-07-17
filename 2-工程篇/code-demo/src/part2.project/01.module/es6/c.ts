@@ -3,14 +3,17 @@ import { P } from './a'; // 导入接口
 import { f as F } from './a'; // 导入时起别名
 import * as All from './a'; // 导入模块中的所有成员，绑定在 All 上
 import myFunction from './a'; // 不加{}，导入默认
+import D from './d';
 
-console.log(a, b, c);
+console.log('./a =',{
+	a, b, c
+});
 
 let p: P = {
 	x: 1,
 	y: 1,
 };
-
-console.log(All);
-
+console.log('p =',p);
+console.log('All =', All);
+D();
 myFunction();

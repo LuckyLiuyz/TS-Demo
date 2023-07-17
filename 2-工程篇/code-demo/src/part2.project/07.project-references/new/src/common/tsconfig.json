@@ -1,4 +1,5 @@
 {
+		// extends继承的配置文件
     "extends": "../../tsconfig.json",
     "compilerOptions": {
         "outDir": "../../dist/common",

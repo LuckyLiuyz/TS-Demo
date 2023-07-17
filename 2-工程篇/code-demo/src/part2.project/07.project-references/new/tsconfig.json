@@ -3,7 +3,7 @@
     "target": "es5",
     "module": "commonjs",
     "strict": true,
-    "composite": true,
-    "declaration": true
+    "composite": true, // 组合模式下，说明该文件夹为一个子项目
+    "declaration": true // 为子项目生成.d.ts声明文件，此选项较为关键；
   }
 }

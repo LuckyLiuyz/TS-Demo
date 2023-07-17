@@ -1,3 +1,8 @@
+/**
+ * 声明合并：
+ *
+ */
+
 interface A {
 	x: number;
 	// y: string;
@@ -24,13 +29,13 @@ class C {}
 namespace C {
 	export let state = 1;
 }
-console.log(C.state);
+console.log('C.state',C.state);
 
 function Lib() {}
 namespace Lib {
 	export let version = '1.0';
 }
-console.log(Lib.version);
+console.log('Lib.version',Lib.version);
 
 enum Color {
 	Red,
@@ -40,4 +45,4 @@ enum Color {
 namespace Color {
 	export function mix() {}
 }
-console.log(Color);
+console.log('Color',Color);

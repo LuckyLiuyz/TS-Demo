@@ -1,8 +1,10 @@
 {
+		// extends继承的配置文件
     "extends": "../../tsconfig.json",
     "compilerOptions": {
         "outDir": "../../dist/server",
     },
+		// references：子项目中依赖的其它子项目；
     "references": [
         { "path": "../common" }
     ]

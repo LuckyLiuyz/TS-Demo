@@ -1,5 +1,7 @@
 {
+		// extends继承的配置文件
     "extends": "../tsconfig.json",
+		// references：子项目中依赖的其它子项目；
     "references": [
         { "path": "../src/client" },
         { "path": "../src/server" }

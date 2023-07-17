@@ -1,0 +1,23 @@
+{
+	"name": "demo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "",
+	"private": true,
+	"scripts": {
+		"bootstrap": "yarn && npm-run-all --serial install:*",
+		"install:ts-babel": "cd ts-babel && yarn",
+		"install:ts-base": "cd ts-base && yarn",
+		"install:ts-express": "cd ts-express && yarn",
+		"install:ts-react": "cd ts-react && yarn",
+		"install:ts-react-app": "cd ts-react-app && yarn",
+		"install:ts-redux": "cd ts-redux && yarn",
+		"install:ts-vue": "cd ts-vue && yarn",
+		"install:vue-employee-query": "cd vue-employee-query && yarn",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"devDependencies": {
+		"npm-run-all": "~4.1.5",
+		"yarn": "^1.22.19"
+	}
+}

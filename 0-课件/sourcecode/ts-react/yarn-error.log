@@ -1,0 +1,58 @@
+Arguments: 
+  D:\Program Files\nodejs\node.exe D:\DemoProject\GitHub\TS-Demo\0-课件\sourcecode\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  D:\DemoProject\GitHub\TS-Demo\0-课件\sourcecode\node_modules\.bin;D:\DemoProject\GitHub\TS-Demo\0-课件\node_modules\.bin;D:\DemoProject\GitHub\TS-Demo\node_modules\.bin;D:\DemoProject\GitHub\node_modules\.bin;D:\DemoProject\node_modules\.bin;D:\node_modules\.bin;D:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\run-script\lib\node-gyp-bin;D:\DemoProject\GitHub\TS-Demo\0-课件\sourcecode\node_modules\.bin;D:\DemoProject\GitHub\TS-Demo\0-课件\node_modules\.bin;D:\DemoProject\GitHub\TS-Demo\node_modules\.bin;D:\DemoProject\GitHub\node_modules\.bin;D:\DemoProject\node_modules\.bin;D:\node_modules\.bin;D:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\run-script\lib\node-gyp-bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;d:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_111\bin;C:\Program Files\dotnet\;D:\Program Files\GitHub CLI\;D:\Program Files\nodejs\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Microsoft VS Code\bin;d:\Program Files\JetBrains\IntelliJ IDEA 2019.2.1\bin;D:\Program Files (x86)\Fiddler;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin;C:\Users\Administrator\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\Administrator\AppData\Local\Yarn\Cache\v6\npm-big-js-3.2.0-a5fc298b81b9e0dca2e458824784b65c52ba588e-integrity\node_modules\big.js\big.js' -> 'D:\DemoProject\GitHub\TS-Demo\0-课件\sourcecode\ts-react\node_modules\html-webpack-plugin\node_modules\big.js\big.js'
+
+npm manifest: 
+  {
+    "name": "ts_react",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./src/index.tsx",
+    "scripts": {
+      "start": "webpack-dev-server --mode=development --config ./build/webpack.config.js",
+      "build": "webpack --mode=production --config ./build/webpack.config.js"
+    },
+    "keywords": [
+      "TypeScript",
+      "React"
+    ],
+    "author": "liangxiao",
+    "license": "ISC",
+    "devDependencies": {
+      "@types/react": "^16.9.2",
+      "@types/react-dom": "^16.8.4",
+      "@types/source-map": "^0.5.2",
+      "clean-webpack-plugin": "^3.0.0",
+      "html-webpack-plugin": "^3.2.0",
+      "ts-loader": "^6.0.2",
+      "typescript": "^3.5.1",
+      "webpack": "^4.39.2",
+      "webpack-cli": "^3.3.2",
+      "webpack-dev-server": "^3.5.1",
+      "webpack-merge": "^4.2.1"
+    },
+    "dependencies": {
+      "react": "^16.8.6",
+      "react-dom": "^16.8.6"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

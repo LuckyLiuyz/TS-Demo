@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
 
+// 类的属性的类型
 interface Greeting {
     name: string;
     firstName?: string;
     lastName?: string;
 }
 
+// 类的状态类型
 interface HelloState {
     count: number
 }
 
+/**
+ * class Component<P = {}, S = {}, SS = any>
+ * 1、P = {} 类的属性的类型
+ * 2、S = {} 类的状态的类型
+ * 3、SS = any 不用关注
+ */
 class HelloClass extends Component<Greeting, HelloState> {
     state: HelloState = {
         count: 0
